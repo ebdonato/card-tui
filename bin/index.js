@@ -160,11 +160,11 @@ function main() {
                 message: 'Selecione:',
                 prefix: chalk.green('?'),
                 choices: [
-                    { name: '📄  Ver meu CV (Terminal)', value: actions.VIEW_CV },
-                    { name: '💾  Download meu CV (PDF)', value: actions.DOWNLOAD_CV },
-                    { name: '📱  Mostrar QR Code', value: actions.SHOW_QR },
-                    { name: '✉️   Enviar um e-mail', value: actions.EMAIL },
-                    { name: '🚪  Sair', value: actions.EXIT },
+                    { name: '📄 Ver meu CV (Terminal)', value: actions.VIEW_CV },
+                    { name: '💾 Download meu CV (PDF)', value: actions.DOWNLOAD_CV },
+                    { name: '📱 Mostrar QR Code', value: actions.SHOW_QR },
+                    { name: '📧 Enviar um e-mail', value: actions.EMAIL },
+                    { name: '🚪 Sair', value: actions.EXIT },
                 ],
             },
         ])
