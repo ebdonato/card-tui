@@ -11,8 +11,8 @@ import open from 'open'
 import { marked } from 'marked'
 import TerminalRenderer from 'marked-terminal'
 
-// --- Configuração de Caminhos ---
-// Necessário para ES Modules encontrarem os arquivos locais corretamente
+// --- Path Configuration ---
+// Required for ES Modules to find local files correctly
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const rootDir = path.join(__dirname, '..')
@@ -20,7 +20,7 @@ const rootDir = path.join(__dirname, '..')
 const RESUME_PATH = path.join(rootDir, 'data', 'resume.md')
 const PDF_PATH = path.join(rootDir, 'assets', 'resume.pdf')
 
-// --- Dados Pessoais (Cabeçalho) ---
+// --- Personal Data (Header) ---
 const data = {
     name: chalk.bold.green('Eduardo Batista DONATO'),
     handle: chalk.white('@ebdonato'),
@@ -39,10 +39,10 @@ const data = {
     ),
 }
 
-// --- Funções de UI ---
+// --- UI Functions ---
 
 /**
- * Mostra o cabeçalho principal (Box)
+ * Shows the main header (Box)
  */
 function showHeader() {
     console.clear()
@@ -71,23 +71,23 @@ function showHeader() {
 }
 
 /**
- * Exibe o QR Code para acesso mobile
+ * Shows the QR Code for mobile access
  */
 function showQRCode() {
     console.clear()
-    console.log(chalk.bold.green('\n📱 QR Code - Acesso Mobile\n'))
-    console.log(chalk.dim('Escaneie para acessar: https://navto.me/ebdonato\n'))
+    console.log(chalk.bold.green('\n📱 QR Code - Mobile Access\n'))
+    console.log(chalk.dim('Scan to access: https://navto.me/ebdonato\n'))
     qrcode.generate('https://navto.me/ebdonato', { small: true })
     console.log('')
 }
 
 /**
- * Renderiza o CV (Markdown) diretamente no terminal
+ * Renders the CV (Markdown) directly in the terminal
  */
 function showResume() {
     console.clear()
 
-    // Configura o marked para usar cores e estilos de terminal
+    // Configure marked to use terminal colors and styles
     marked.setOptions({
         renderer: new TerminalRenderer({
             width: 80,
@@ -100,14 +100,14 @@ function showResume() {
         const resumeContent = fs.readFileSync(RESUME_PATH, 'utf8')
         console.log(marked(resumeContent))
 
-        console.log(chalk.dim('\n--- Fim do Currículo ---\n'))
-    } catch (err) {
-        console.log(chalk.red('Erro ao ler o currículo. O arquivo resume.md existe?'))
+        console.log(chalk.dim('\n--- End of Resume ---\n'))
+    } catch (_err) {
+        console.log(chalk.red('Error reading resume. Does the resume.md file exist?'))
     }
 }
 
 /**
- * Simula o download do PDF copiando para o diretório atual do usuário
+ * Downloads the PDF by copying to the user's current directory
  */
 function downloadResume() {
     const filename = 'Eduardo_Donato_CV.pdf'
@@ -115,27 +115,27 @@ function downloadResume() {
 
     try {
         fs.copyFileSync(PDF_PATH, destPath)
-        console.log(chalk.green(`\n✅ Sucesso! O CV foi salvo em: ${destPath}\n`))
-    } catch (err) {
+        console.log(chalk.green(`\n✅ Success! CV saved to: ${destPath}\n`))
+    } catch (_err) {
         console.log(
             chalk.red(
-                `\n❌ Erro ao salvar o PDF. Verifique se o arquivo foi gerado com 'npm run build'.\n`,
+                `\n❌ Error saving PDF. Make sure the file was generated with 'npm run build'.\n`,
             ),
         )
     }
 }
 
 /**
- * Abre o cliente de email padrão
+ * Opens the default email client
  */
 async function sendEmail() {
-    const email = 'seuemail@exemplo.com' // Substitua pelo seu email real
-    const subject = 'Contato via npx ebdonato'
+    const email = 'youremail@example.com' // Replace with your real email
+    const subject = 'Contact via npx ebdonato'
     await open(`mailto:${email}?subject=${subject}`)
-    console.log(chalk.green('\n📧 Abrindo seu cliente de e-mail...\n'))
+    console.log(chalk.green('\n📧 Opening your email client...\n'))
 }
 
-// --- Menu Principal ---
+// --- Main Menu ---
 
 const actions = {
     VIEW_CV: 'view_cv',
@@ -153,14 +153,14 @@ function main() {
             {
                 type: 'list',
                 name: 'action',
-                message: 'Selecione:',
+                message: 'Select:',
                 prefix: chalk.green('?'),
                 choices: [
-                    { name: '📄 Ver meu CV (Terminal)', value: actions.VIEW_CV },
-                    { name: '💾 Download meu CV (PDF)', value: actions.DOWNLOAD_CV },
-                    { name: '📱 Mostrar QR Code', value: actions.SHOW_QR },
-                    { name: '📧 Enviar um e-mail', value: actions.EMAIL },
-                    { name: '🚪 Sair', value: actions.EXIT },
+                    { name: '📄 View my CV (Terminal)', value: actions.VIEW_CV },
+                    { name: '💾 Download my CV (PDF)', value: actions.DOWNLOAD_CV },
+                    { name: '📱 Show QR Code', value: actions.SHOW_QR },
+                    { name: '📧 Send an email', value: actions.EMAIL },
+                    { name: '🚪 Exit', value: actions.EXIT },
                 ],
             },
         ])
@@ -168,13 +168,13 @@ function main() {
             switch (answer.action) {
                 case actions.VIEW_CV:
                     showResume()
-                    // Pequena pausa antes de voltar ao menu ou sair
+                    // Brief pause before returning to menu or exiting
                     inquirer
                         .prompt([
                             {
                                 type: 'confirm',
                                 name: 'back',
-                                message: 'Voltar ao menu?',
+                                message: 'Return to menu?',
                                 default: true,
                             },
                         ])
@@ -186,7 +186,7 @@ function main() {
 
                 case actions.DOWNLOAD_CV:
                     downloadResume()
-                    // Mantém o processo vivo brevemente
+                    // Keep the process alive briefly
                     setTimeout(() => process.exit(0), 1000)
                     break
 
@@ -197,7 +197,7 @@ function main() {
                             {
                                 type: 'confirm',
                                 name: 'back',
-                                message: 'Voltar ao menu?',
+                                message: 'Return to menu?',
                                 default: true,
                             },
                         ])
@@ -213,12 +213,12 @@ function main() {
                     break
 
                 case actions.EXIT:
-                    console.log(chalk.cyan('Obrigado pela visita! 👋'))
+                    console.log(chalk.cyan('Thanks for visiting! 👋'))
                     process.exit(0)
                     break
             }
         })
 }
 
-// Inicia a aplicação
+// Start the application
 main()
