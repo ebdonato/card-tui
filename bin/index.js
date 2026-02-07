@@ -44,17 +44,10 @@ const data = {
 // --- Funções de UI ---
 
 /**
- * Mostra o cabeçalho principal (Box + QR Code)
+ * Mostra o cabeçalho principal (Box)
  */
 function showHeader() {
     console.clear()
-
-    // Gera o QR Code para exibir no terminal (small version)
-    // O callback é usado para capturar a string do QR code ao invés de imprimir direto
-    let qrOutput = ''
-    qrcode.generate('https://dev.page/ebdonato', { small: true }, (qrcode) => {
-        qrOutput = qrcode
-    })
 
     const headers = [
         `${data.labelWork}  ${data.work}`,
@@ -69,12 +62,6 @@ function showHeader() {
         `${data.bio}`,
     ].join('\n')
 
-    // Cria o layout: QR Code na esquerda, Texto na direita
-    // Nota: Ajuste manual simples para layout lado a lado no terminal é complexo sem libs pesadas (como ink).
-    // Uma abordagem segura e responsiva é colocar o QR code acima ou abaixo,
-    // ou usar um boxen simples que engloba tudo.
-
-    // Vamos criar um box que contém as informações textuais
     const card = boxen(headers, {
         margin: 1,
         padding: 1,
@@ -85,9 +72,17 @@ function showHeader() {
     })
 
     console.log(card)
-    console.log(chalk.dim('Escaneie para acessar links mobile:'))
-    console.log(qrOutput)
-    console.log('\n' + chalk.green('? ') + 'O que você deseja fazer? (Use as setas)' + '\n')
+}
+
+/**
+ * Exibe o QR Code para acesso mobile
+ */
+function showQRCode() {
+    console.clear()
+    console.log(chalk.bold.green('\n📱 QR Code - Acesso Mobile\n'))
+    console.log(chalk.dim('Escaneie para acessar: https://dev.page/ebdonato\n'))
+    qrcode.generate('https://dev.page/ebdonato', { small: true })
+    console.log('')
 }
 
 /**
@@ -149,6 +144,7 @@ async function sendEmail() {
 const actions = {
     VIEW_CV: 'view_cv',
     DOWNLOAD_CV: 'download_cv',
+    SHOW_QR: 'show_qr',
     EMAIL: 'email',
     EXIT: 'exit',
 }
@@ -161,10 +157,12 @@ function main() {
             {
                 type: 'list',
                 name: 'action',
-                message: 'Selecione uma opção:',
+                message: 'Selecione:',
+                prefix: chalk.green('?'),
                 choices: [
                     { name: '📄  Ver meu CV (Terminal)', value: actions.VIEW_CV },
                     { name: '💾  Download meu CV (PDF)', value: actions.DOWNLOAD_CV },
+                    { name: '📱  Mostrar QR Code', value: actions.SHOW_QR },
                     { name: '✉️   Enviar um e-mail', value: actions.EMAIL },
                     { name: '🚪  Sair', value: actions.EXIT },
                 ],
@@ -194,6 +192,23 @@ function main() {
                     downloadResume()
                     // Mantém o processo vivo brevemente
                     setTimeout(() => process.exit(0), 1000)
+                    break
+
+                case actions.SHOW_QR:
+                    showQRCode()
+                    inquirer
+                        .prompt([
+                            {
+                                type: 'confirm',
+                                name: 'back',
+                                message: 'Voltar ao menu?',
+                                default: true,
+                            },
+                        ])
+                        .then((ans) => {
+                            if (ans.back) main()
+                            else process.exit(0)
+                        })
                     break
 
                 case actions.EMAIL:
