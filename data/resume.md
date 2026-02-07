@@ -6,12 +6,12 @@ Sou engenheiro eletricista e de planejamento. Atualmente desenvolvedor Full Stac
 
 ### Experiência
 
-* **Dock** - Software Engineer
-  * Desenvolvimento de soluções financeiras...
-* **Empresa Anterior** - Cargo
-  * Descrição...
+- **Dock** - Software Engineer
+    - Desenvolvimento de soluções financeiras...
+- **Empresa Anterior** - Cargo
+    - Descrição...
 
 ### Tech Stack
 
-* Node.js, Vue.js, TypeScript
-* Power BI, Power Apps
+- Node.js, Vue.js, TypeScript
+- Power BI, Power Apps
