@@ -22,22 +22,20 @@ const PDF_PATH = path.join(rootDir, 'assets', 'resume.pdf')
 
 // --- Dados Pessoais (Cabeçalho) ---
 const data = {
-    name: chalk.bold.green('Eduardo Batista Donato'),
+    name: chalk.bold.green('Eduardo Batista DONATO'),
     handle: chalk.white('@ebdonato'),
     work: chalk.white('Full Stack Developer | Software Engineer at Dock'),
-    twitter: chalk.cyan('https://twitter.com/ebdonato'),
+    twitter: chalk.cyan('https://x.com/ebdonato'),
     github: chalk.cyan('https://github.com/ebdonato'),
     linkedin: chalk.cyan('https://linkedin.com/in/ebdonato'),
-    web: chalk.cyan('https://dev.page/ebdonato'),
-    npx: chalk.red('npx ebdonato'),
+    web: chalk.cyan('https://navto.me/ebdonato'),
     labelWork: chalk.white.bold('       Work:'),
     labelTwitter: chalk.white.bold('    Twitter:'),
     labelGitHub: chalk.white.bold('     GitHub:'),
     labelLinkedIn: chalk.white.bold('   LinkedIn:'),
     labelWeb: chalk.white.bold('        Web:'),
-    labelCard: chalk.white.bold('       Card:'),
     bio: chalk.italic.gray(
-        `I am an electrical and planning engineer.\nI am currently a full stack developer (Vue.js e Node.js)\nand Microsoft Power Platform developer.`,
+        `I am an electrical and planning engineer.\nI am currently a full stack developer (Vue, React, Node, Go and AWS)\nand Microsoft Power Platform developer.`,
     ),
 }
 
@@ -56,8 +54,6 @@ function showHeader() {
         `${data.labelGitHub}  ${data.github}`,
         `${data.labelLinkedIn}  ${data.linkedin}`,
         `${data.labelWeb}  ${data.web}`,
-        ``,
-        `${data.labelCard}  ${data.npx}`,
         ``,
         `${data.bio}`,
     ].join('\n')
@@ -80,8 +76,8 @@ function showHeader() {
 function showQRCode() {
     console.clear()
     console.log(chalk.bold.green('\n📱 QR Code - Acesso Mobile\n'))
-    console.log(chalk.dim('Escaneie para acessar: https://dev.page/ebdonato\n'))
-    qrcode.generate('https://dev.page/ebdonato', { small: true })
+    console.log(chalk.dim('Escaneie para acessar: https://navto.me/ebdonato\n'))
+    qrcode.generate('https://navto.me/ebdonato', { small: true })
     console.log('')
 }
 
