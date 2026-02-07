@@ -6,7 +6,20 @@ const outputPath = path.resolve('assets', 'resume.pdf')
 
 console.log('🔄 Generating updated PDF from Markdown...')
 
-mdToPdf({ path: inputPath }, { dest: outputPath })
+const options = {
+    stylesheet: [path.resolve('assets', 'resume.css')],
+    pdf_options: {
+        format: 'A4',
+        margin: '20mm',
+        printBackground: true,
+    },
+    marked_options: {
+        headerIds: false,
+        mangle: false,
+    },
+}
+
+mdToPdf({ path: inputPath }, { dest: outputPath, ...options })
     .then(() => {
         console.log('✅ PDF generated successfully at: /assets/resume.pdf')
     })
