@@ -117,7 +117,8 @@ function showResume() {
 
     try {
         const resumeContent = fs.readFileSync(getResumePath(), 'utf8')
-        console.log(marked(resumeContent))
+        const resumeContentWithoutDivs = resumeContent.replace('<div class="page-break"></div>', '')
+        console.log(marked(resumeContentWithoutDivs))
 
         console.log(chalk.dim(`\n${t('messages.endOfResume')}\n`))
     } catch (_err) {
