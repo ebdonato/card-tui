@@ -160,7 +160,10 @@ async function changeLanguage() {
     const currentLocale = getLocale()
 
     const choices = localeOptions.map((opt) => ({
-        name: opt.code === currentLocale ? `${opt.name} (current)` : opt.name,
+        name:
+            opt.code === currentLocale
+                ? `${opt.flag} ${opt.name} (current)`
+                : `${opt.flag} ${opt.name}`,
         value: opt.code,
     }))
 
