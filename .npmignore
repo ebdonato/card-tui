@@ -1,0 +1,21 @@
+# Dev configuration files
+.eslintrc.json
+.prettierrc.json
+.prettierignore
+
+# Editor/IDE settings
+.vscode/
+
+# CI/CD workflows
+.github/
+
+# Documentation not needed in package
+AGENTS.md
+
+# Build script (only needed for development)
+build-cv.js
+
+# Assets not needed in package
+assets/.gitkeep
+assets/preview.png
+assets/resume.css
