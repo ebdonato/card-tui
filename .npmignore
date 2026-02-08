@@ -15,7 +15,7 @@ AGENTS.md
 # Build script (only needed for development)
 build-cv.js
 
-# Assets not needed in package
+# Assets not needed in package (only PDF files are needed)
 assets/.gitkeep
 assets/preview.png
 assets/resume.css

@@ -1,0 +1,30 @@
+{
+    "header": {
+        "work": "Full Stack Developer | Software Engineer at Dock",
+        "bio": "I am an electrical and planning engineer.\nI am currently a full stack developer (Vue, React, Node, Go and AWS)\nand Microsoft Power Platform developer.",
+        "labelWork": "       Work:",
+        "labelTwitter": "    Twitter:",
+        "labelGitHub": "     GitHub:",
+        "labelLinkedIn": "   LinkedIn:",
+        "labelWeb": "        Web:"
+    },
+    "menu": {
+        "select": "Select:",
+        "viewCv": "View my CV (Terminal)",
+        "downloadCv": "Download my CV (PDF)",
+        "showQr": "Show QR Code",
+        "sendEmail": "Send an email",
+        "exit": "Exit"
+    },
+    "messages": {
+        "returnToMenu": "Return to menu?",
+        "qrTitle": "QR Code - Mobile Access",
+        "qrScan": "Scan to access: https://navto.me/ebdonato",
+        "endOfResume": "--- End of Resume ---",
+        "resumeError": "Error reading resume. Does the resume file exist?",
+        "downloadSuccess": "Success! CV saved to:",
+        "downloadError": "Error saving PDF. Make sure the file was generated with 'npm run build'.",
+        "emailOpening": "Opening your email client...",
+        "goodbye": "Thanks for visiting!"
+    }
+}

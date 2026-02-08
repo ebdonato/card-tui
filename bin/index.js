@@ -10,6 +10,10 @@ import qrcode from 'qrcode-terminal'
 import open from 'open'
 import { marked } from 'marked'
 import TerminalRenderer from 'marked-terminal'
+import { init as initI18n, t, getLocale } from '../lib/i18n.js'
+
+// --- Initialize i18n ---
+initI18n()
 
 // --- Path Configuration ---
 // Required for ES Modules to find local files correctly
@@ -17,26 +21,25 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const rootDir = path.join(__dirname, '..')
 
-const RESUME_PATH = path.join(rootDir, 'data', 'resume.md')
-const PDF_PATH = path.join(rootDir, 'assets', 'resume.pdf')
+const locale = getLocale()
+const RESUME_PATH = path.join(rootDir, 'data', `resume-${locale}.md`)
+const PDF_PATH = path.join(rootDir, 'assets', `resume-${locale}.pdf`)
 
 // --- Personal Data (Header) ---
 const data = {
     name: chalk.bold.green('Eduardo Batista DONATO'),
     handle: chalk.white('@ebdonato'),
-    work: chalk.white('Full Stack Developer | Software Engineer at Dock'),
+    work: chalk.white(t('header.work')),
     twitter: chalk.cyan('https://x.com/ebdonato'),
     github: chalk.cyan('https://github.com/ebdonato'),
     linkedin: chalk.cyan('https://linkedin.com/in/ebdonato'),
     web: chalk.cyan('https://navto.me/ebdonato'),
-    labelWork: chalk.white.bold('       Work:'),
-    labelTwitter: chalk.white.bold('    Twitter:'),
-    labelGitHub: chalk.white.bold('     GitHub:'),
-    labelLinkedIn: chalk.white.bold('   LinkedIn:'),
-    labelWeb: chalk.white.bold('        Web:'),
-    bio: chalk.italic.gray(
-        `I am an electrical and planning engineer.\nI am currently a full stack developer (Vue, React, Node, Go and AWS)\nand Microsoft Power Platform developer.`,
-    ),
+    labelWork: chalk.white.bold(t('header.labelWork')),
+    labelTwitter: chalk.white.bold(t('header.labelTwitter')),
+    labelGitHub: chalk.white.bold(t('header.labelGitHub')),
+    labelLinkedIn: chalk.white.bold(t('header.labelLinkedIn')),
+    labelWeb: chalk.white.bold(t('header.labelWeb')),
+    bio: chalk.italic.gray(t('header.bio')),
 }
 
 // --- UI Functions ---
@@ -75,8 +78,8 @@ function showHeader() {
  */
 function showQRCode() {
     console.clear()
-    console.log(chalk.bold.green('\n📱 QR Code - Mobile Access\n'))
-    console.log(chalk.dim('Scan to access: https://navto.me/ebdonato\n'))
+    console.log(chalk.bold.green(`\n📱 ${t('messages.qrTitle')}\n`))
+    console.log(chalk.dim(`${t('messages.qrScan')}\n`))
     qrcode.generate('https://navto.me/ebdonato', { small: true })
     console.log('')
 }
@@ -100,9 +103,9 @@ function showResume() {
         const resumeContent = fs.readFileSync(RESUME_PATH, 'utf8')
         console.log(marked(resumeContent))
 
-        console.log(chalk.dim('\n--- End of Resume ---\n'))
+        console.log(chalk.dim(`\n${t('messages.endOfResume')}\n`))
     } catch (_err) {
-        console.log(chalk.red('Error reading resume. Does the resume.md file exist?'))
+        console.log(chalk.red(t('messages.resumeError')))
     }
 }
 
@@ -115,13 +118,9 @@ function downloadResume() {
 
     try {
         fs.copyFileSync(PDF_PATH, destPath)
-        console.log(chalk.green(`\n✅ Success! CV saved to: ${destPath}\n`))
+        console.log(chalk.green(`\n✅ ${t('messages.downloadSuccess')} ${destPath}\n`))
     } catch (_err) {
-        console.log(
-            chalk.red(
-                `\n❌ Error saving PDF. Make sure the file was generated with 'npm run build'.\n`,
-            ),
-        )
+        console.log(chalk.red(`\n❌ ${t('messages.downloadError')}\n`))
     }
 }
 
@@ -129,10 +128,10 @@ function downloadResume() {
  * Opens the default email client
  */
 async function sendEmail() {
-    const email = 'youremail@example.com' // Replace with your real email
+    const email = 'eduardo.donato@gmail.com'
     const subject = 'Contact via npx ebdonato'
     await open(`mailto:${email}?subject=${subject}`)
-    console.log(chalk.green('\n📧 Opening your email client...\n'))
+    console.log(chalk.green(`\n📧 ${t('messages.emailOpening')}\n`))
 }
 
 // --- Main Menu ---
@@ -153,14 +152,14 @@ function main() {
             {
                 type: 'list',
                 name: 'action',
-                message: 'Select:',
+                message: t('menu.select'),
                 prefix: chalk.green('?'),
                 choices: [
-                    { name: '📄 View my CV (Terminal)', value: actions.VIEW_CV },
-                    { name: '💾 Download my CV (PDF)', value: actions.DOWNLOAD_CV },
-                    { name: '📱 Show QR Code', value: actions.SHOW_QR },
-                    { name: '📧 Send an email', value: actions.EMAIL },
-                    { name: '🚪 Exit', value: actions.EXIT },
+                    { name: `📄 ${t('menu.viewCv')}`, value: actions.VIEW_CV },
+                    { name: `💾 ${t('menu.downloadCv')}`, value: actions.DOWNLOAD_CV },
+                    { name: `📱 ${t('menu.showQr')}`, value: actions.SHOW_QR },
+                    { name: `📧 ${t('menu.sendEmail')}`, value: actions.EMAIL },
+                    { name: `🚪 ${t('menu.exit')}`, value: actions.EXIT },
                 ],
             },
         ])
@@ -174,7 +173,7 @@ function main() {
                             {
                                 type: 'confirm',
                                 name: 'back',
-                                message: 'Return to menu?',
+                                message: t('messages.returnToMenu'),
                                 default: true,
                             },
                         ])
@@ -197,7 +196,7 @@ function main() {
                             {
                                 type: 'confirm',
                                 name: 'back',
-                                message: 'Return to menu?',
+                                message: t('messages.returnToMenu'),
                                 default: true,
                             },
                         ])
@@ -213,7 +212,7 @@ function main() {
                     break
 
                 case actions.EXIT:
-                    console.log(chalk.cyan('Thanks for visiting! 👋'))
+                    console.log(chalk.cyan(`${t('messages.goodbye')} 👋`))
                     process.exit(0)
                     break
             }
