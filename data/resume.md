@@ -1,6 +1,6 @@
 # Eduardo DONATO
 
-👨‍💻 Desenvolvedor Full Stack | Engenheiro de Software na [Dock](https://www.dock.tech/)
+**👨‍💻 Desenvolvedor Full Stack | Engenheiro de Software na [Dock](https://www.dock.tech/)**
 
 ✉️ [eduardo.donato@gmail.com](mailto:eduardo.donato@gmail.com) | ☎️ +55 27 999693809 | 📍 Cachoeiro de Itapemirim, ES, Brasil
 
@@ -10,13 +10,9 @@
 
 Engenheiro Eletricista com pós-graduação em Engenharia de Planejamento e Especialista em Go Lang. Experiência em desenvolvimento web full-stack, gestão de projetos e sistemas de medição e controle industrial. Habilidades em Node.js, React, Vuejs, Power BI, Golang e TypeScript. Fortes habilidades de liderança e gestão de equipes.
 
-### Habilidades
+**Habilidades**: Node.js, Supabase, PostgreSQL, React, Vuejs, Power BI, TypeScript, Project Management, C++, VBA, Go, AWS, Python, DDD, GraphQL, Engenharia de Software com IA
 
-Node.js, Supabase, PostgreSQL, React, Vuejs, Power BI, TypeScript, Project Management, C++, VBA, Go, AWS, Python
-
-### Idiomas
-
-**Inglês:** Avançado | **Português:** Nativo
+**Idiomas**: Inglês: Avançado | Português: Nativo
 
 ## Experiência Profissional
 
@@ -37,6 +33,8 @@ Responsável pela automatização de processos rotineiros e/ou repetitivos atrav
 #### _agosto de 2019 – março de 2020, Vitória, ES_
 
 Gestão da cadeia de suprimentos da gerência de Projetos e Construção de Alta Tensão da EDP. Modelagem, automatização, aperfeiçoamento e implementação de processos na gestão da cadeia de suprimentos. Responsável pelo desenvolvimento e manutenção dos relatórios gerenciais do contrato com uso avançado da ferramenta Power BI, incluindo a extração e o tratamento de dados do SAP. Desenvolvimento de macros para interação com SAP. Avaliação e implementação da estratégia e das ferramentas de gerenciamento de projetos.
+
+<div class="page-break"></div>
 
 ### **Eletromarquez** | Coordenador de Operações
 
