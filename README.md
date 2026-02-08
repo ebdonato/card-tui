@@ -20,6 +20,16 @@ Run directly with npx (no installation required):
 npx ebdonato
 ```
 
+### Multi-Language Support
+
+The CLI supports **English**, **Portuguese**, and **Spanish**. It automatically detects your system language, or you can force a specific language:
+
+```bash
+npx ebdonato --lang=en   # English
+npx ebdonato --lang=pt   # Portuguese (Portugues)
+npx ebdonato --lang=es   # Spanish (Espanol)
+```
+
 That's it! You'll see an interactive menu with options to:
 
 - **View CV** - Read the full resume directly in the terminal (Markdown rendered beautifully)
@@ -31,6 +41,7 @@ That's it! You'll see an interactive menu with options to:
 ## Features
 
 - **Zero Installation** - Works instantly via `npx`
+- **Multi-Language** - Supports English, Portuguese, and Spanish (auto-detects system locale)
 - **Interactive Menu** - Easy navigation with arrow keys
 - **Terminal-Rendered Resume** - Markdown displayed with colors and formatting
 - **PDF Download** - Get a professionally styled PDF resume
@@ -74,11 +85,16 @@ npm install
 
     - Update the email address in the `sendEmail()` function
 
-3. **Replace `data/resume.md`**:
-    - Write your resume in Markdown format
+3. **Replace `data/resume-{lang}.md`**:
+    - Write your resume in Markdown format for each language
+    - Files: `resume-en.md`, `resume-pt.md`, `resume-es.md`
     - This content is displayed in the terminal and converted to PDF
 
-4. **Customize PDF styling** (optional):
+4. **Update `locales/*.json`**:
+    - Edit `locales/en.json`, `locales/pt.json`, `locales/es.json`
+    - Translate UI strings (menu labels, messages, header text)
+
+5. **Customize PDF styling** (optional):
     - Edit `assets/resume.css` to change the PDF appearance
 
 ### Step 3: Build and Test
@@ -122,14 +138,14 @@ Now anyone can run `npx yourusername` to see your business card!
 
 ### Commands
 
-| Command                | Description                 |
-| ---------------------- | --------------------------- |
-| `npm start`            | Run the CLI locally         |
-| `npm run build`        | Generate PDF from resume.md |
-| `npm run lint`         | Check for code style issues |
-| `npm run lint:fix`     | Auto-fix linting errors     |
-| `npm run format`       | Format code with Prettier   |
-| `npm run format:check` | Check code formatting       |
+| Command                | Description                     |
+| ---------------------- | ------------------------------- |
+| `npm start`            | Run the CLI locally             |
+| `npm run build`        | Generate PDFs for all languages |
+| `npm run lint`         | Check for code style issues     |
+| `npm run lint:fix`     | Auto-fix linting errors         |
+| `npm run format`       | Format code with Prettier       |
+| `npm run format:check` | Check code formatting           |
 
 ### Project Structure
 
@@ -137,12 +153,22 @@ Now anyone can run `npx yourusername` to see your business card!
 card-tui/
 ├── bin/
 │   └── index.js          # Main CLI application
+├── lib/
+│   └── i18n.js           # Internationalization module
+├── locales/
+│   ├── en.json           # English UI strings
+│   ├── pt.json           # Portuguese UI strings
+│   └── es.json           # Spanish UI strings
 ├── data/
-│   └── resume.md         # Resume content (Markdown)
+│   ├── resume-en.md      # English resume
+│   ├── resume-pt.md      # Portuguese resume
+│   └── resume-es.md      # Spanish resume
 ├── assets/
 │   ├── resume.css        # PDF styling
-│   └── resume.pdf        # Generated PDF
-├── build-cv.js           # PDF generation script
+│   ├── resume-en.pdf     # Generated English PDF
+│   ├── resume-pt.pdf     # Generated Portuguese PDF
+│   └── resume-es.pdf     # Generated Spanish PDF
+├── build-cv.js           # PDF generation script (all languages)
 ├── package.json          # Package configuration
 └── AGENTS.md             # Guidelines for AI coding agents
 ```

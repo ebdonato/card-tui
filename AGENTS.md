@@ -26,7 +26,7 @@ node bin/index.js      # Alternative direct execution
 ### Build
 
 ```bash
-npm run build          # Generate PDF from data/resume.md to assets/resume.pdf
+npm run build          # Generate PDFs for all languages (en, pt, es)
 ```
 
 ### Linting
@@ -59,6 +59,11 @@ To manually test the application:
 npm start
 # Or run directly:
 node bin/index.js
+
+# Test with specific language:
+node bin/index.js --lang=en   # English
+node bin/index.js --lang=pt   # Portuguese
+node bin/index.js --lang=es   # Spanish
 ```
 
 If adding tests in the future:
@@ -162,16 +167,85 @@ try {
 card-tui/
 ├── bin/
 │   └── index.js          # Main CLI entry point (executable)
+├── lib/
+│   └── i18n.js           # Internationalization module (locale detection + translations)
+├── locales/
+│   ├── en.json           # English UI strings
+│   ├── pt.json           # Portuguese UI strings
+│   └── es.json           # Spanish UI strings
 ├── data/
-│   └── resume.md         # Resume content in Markdown
+│   ├── resume-en.md      # English resume content
+│   ├── resume-pt.md      # Portuguese resume content
+│   └── resume-es.md      # Spanish resume content
 ├── assets/
 │   ├── resume.css        # PDF styling
-│   └── resume.pdf        # Generated PDF (created by npm run build)
-├── build-cv.js           # PDF generation script
+│   ├── resume-en.pdf     # Generated English PDF (created by npm run build)
+│   ├── resume-pt.pdf     # Generated Portuguese PDF (created by npm run build)
+│   └── resume-es.pdf     # Generated Spanish PDF (created by npm run build)
+├── build-cv.js           # PDF generation script (generates all languages)
 ├── package.json          # Package configuration
 ├── .eslintrc.json        # ESLint configuration
 ├── .prettierrc.json      # Prettier configuration
 └── .prettierignore       # Files excluded from formatting
+```
+
+## Internationalization (i18n)
+
+The application supports multiple languages: **English (en)**, **Portuguese (pt)**, and **Spanish (es)**.
+
+### Language Detection Priority
+
+1. CLI flag: `--lang=xx` (e.g., `--lang=pt`)
+2. System locale (auto-detected via `Intl.DateTimeFormat`)
+3. Fallback to English (`en`)
+
+### Adding/Editing Translations
+
+**UI Strings** are stored in `locales/*.json`:
+
+```javascript
+// locales/en.json structure
+{
+    "header": {
+        "work": "Full Stack Developer | Software Engineer at Dock",
+        "bio": "...",
+        "labelWork": "       Work:",
+        // ...
+    },
+    "menu": {
+        "select": "Select:",
+        "viewCv": "View my CV (Terminal)",
+        // ...
+    },
+    "messages": {
+        "returnToMenu": "Return to menu?",
+        // ...
+    }
+}
+```
+
+**Resume Content** is stored in `data/resume-{lang}.md`:
+
+- `resume-en.md` - English resume
+- `resume-pt.md` - Portuguese resume
+- `resume-es.md` - Spanish resume
+
+### Using Translations in Code
+
+```javascript
+import { init as initI18n, t, getLocale } from '../lib/i18n.js'
+
+// Initialize i18n at startup
+initI18n()
+
+// Get translated string
+console.log(t('menu.viewCv')) // "View my CV (Terminal)"
+
+// Get current locale
+const locale = getLocale() // "en", "pt", or "es"
+
+// Use locale for file paths
+const resumePath = `data/resume-${locale}.md`
 ```
 
 ## Key Dependencies
