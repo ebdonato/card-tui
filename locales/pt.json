@@ -14,17 +14,20 @@
         "downloadCv": "Baixar meu CV (PDF)",
         "showQr": "Mostrar QR Code",
         "sendEmail": "Enviar um e-mail",
+        "changeLanguage": "Mudar idioma",
         "exit": "Sair"
     },
     "messages": {
         "returnToMenu": "Voltar ao menu?",
         "qrTitle": "QR Code - Acesso Mobile",
         "qrScan": "Escaneie para acessar: https://navto.me/ebdonato",
-        "endOfResume": "--- Fim do Currículo ---",
-        "resumeError": "Erro ao ler o currículo. O arquivo de currículo existe?",
+        "endOfResume": "--- Fim do Curriculo ---",
+        "resumeError": "Erro ao ler o curriculo. O arquivo de curriculo existe?",
         "downloadSuccess": "Sucesso! CV salvo em:",
         "downloadError": "Erro ao salvar PDF. Certifique-se de que o arquivo foi gerado com 'npm run build'.",
         "emailOpening": "Abrindo seu cliente de e-mail...",
-        "goodbye": "Obrigado pela visita!"
+        "goodbye": "Obrigado pela visita!",
+        "selectLanguage": "Selecione o idioma:",
+        "languageChanged": "Idioma alterado para"
     }
 }

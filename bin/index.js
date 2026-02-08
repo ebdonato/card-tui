@@ -10,7 +10,7 @@ import qrcode from 'qrcode-terminal'
 import open from 'open'
 import { marked } from 'marked'
 import TerminalRenderer from 'marked-terminal'
-import { init as initI18n, t, getLocale } from '../lib/i18n.js'
+import { init as initI18n, t, getLocale, setLocale, getLocaleOptions } from '../lib/i18n.js'
 
 // --- Initialize i18n ---
 initI18n()
@@ -21,25 +21,39 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const rootDir = path.join(__dirname, '..')
 
-const locale = getLocale()
-const RESUME_PATH = path.join(rootDir, 'data', `resume-${locale}.md`)
-const PDF_PATH = path.join(rootDir, 'assets', `resume-${locale}.pdf`)
+/**
+ * Gets the resume path for the current locale
+ */
+function getResumePath() {
+    return path.join(rootDir, 'data', `resume-${getLocale()}.md`)
+}
 
-// --- Personal Data (Header) ---
-const data = {
-    name: chalk.bold.green('Eduardo Batista DONATO'),
-    handle: chalk.white('@ebdonato'),
-    work: chalk.white(t('header.work')),
-    twitter: chalk.cyan('https://x.com/ebdonato'),
-    github: chalk.cyan('https://github.com/ebdonato'),
-    linkedin: chalk.cyan('https://linkedin.com/in/ebdonato'),
-    web: chalk.cyan('https://navto.me/ebdonato'),
-    labelWork: chalk.white.bold(t('header.labelWork')),
-    labelTwitter: chalk.white.bold(t('header.labelTwitter')),
-    labelGitHub: chalk.white.bold(t('header.labelGitHub')),
-    labelLinkedIn: chalk.white.bold(t('header.labelLinkedIn')),
-    labelWeb: chalk.white.bold(t('header.labelWeb')),
-    bio: chalk.italic.gray(t('header.bio')),
+/**
+ * Gets the PDF path for the current locale
+ */
+function getPdfPath() {
+    return path.join(rootDir, 'assets', `resume-${getLocale()}.pdf`)
+}
+
+/**
+ * Builds the personal data object with current translations
+ */
+function getData() {
+    return {
+        name: chalk.bold.green('Eduardo Batista DONATO'),
+        handle: chalk.white('@ebdonato'),
+        work: chalk.white(t('header.work')),
+        twitter: chalk.cyan('https://x.com/ebdonato'),
+        github: chalk.cyan('https://github.com/ebdonato'),
+        linkedin: chalk.cyan('https://linkedin.com/in/ebdonato'),
+        web: chalk.cyan('https://navto.me/ebdonato'),
+        labelWork: chalk.white.bold(t('header.labelWork')),
+        labelTwitter: chalk.white.bold(t('header.labelTwitter')),
+        labelGitHub: chalk.white.bold(t('header.labelGitHub')),
+        labelLinkedIn: chalk.white.bold(t('header.labelLinkedIn')),
+        labelWeb: chalk.white.bold(t('header.labelWeb')),
+        bio: chalk.italic.gray(t('header.bio')),
+    }
 }
 
 // --- UI Functions ---
@@ -49,6 +63,8 @@ const data = {
  */
 function showHeader() {
     console.clear()
+
+    const data = getData()
 
     const headers = [
         `${data.labelWork}  ${data.work}`,
@@ -100,7 +116,7 @@ function showResume() {
     })
 
     try {
-        const resumeContent = fs.readFileSync(RESUME_PATH, 'utf8')
+        const resumeContent = fs.readFileSync(getResumePath(), 'utf8')
         console.log(marked(resumeContent))
 
         console.log(chalk.dim(`\n${t('messages.endOfResume')}\n`))
@@ -117,7 +133,7 @@ function downloadResume() {
     const destPath = path.join(process.cwd(), filename)
 
     try {
-        fs.copyFileSync(PDF_PATH, destPath)
+        fs.copyFileSync(getPdfPath(), destPath)
         console.log(chalk.green(`\n✅ ${t('messages.downloadSuccess')} ${destPath}\n`))
     } catch (_err) {
         console.log(chalk.red(`\n❌ ${t('messages.downloadError')}\n`))
@@ -134,6 +150,40 @@ async function sendEmail() {
     console.log(chalk.green(`\n📧 ${t('messages.emailOpening')}\n`))
 }
 
+/**
+ * Shows language selection menu
+ */
+async function changeLanguage() {
+    console.clear()
+
+    const localeOptions = getLocaleOptions()
+    const currentLocale = getLocale()
+
+    const choices = localeOptions.map((opt) => ({
+        name: opt.code === currentLocale ? `${opt.name} (current)` : opt.name,
+        value: opt.code,
+    }))
+
+    const answer = await inquirer.prompt([
+        {
+            type: 'list',
+            name: 'locale',
+            message: t('messages.selectLanguage'),
+            prefix: chalk.green('🌐'),
+            choices,
+        },
+    ])
+
+    if (answer.locale !== currentLocale) {
+        setLocale(answer.locale)
+        const newLocaleName = localeOptions.find((o) => o.code === answer.locale)?.name
+        console.log(chalk.green(`\n✅ ${t('messages.languageChanged')} ${newLocaleName}\n`))
+        await new Promise((resolve) => setTimeout(resolve, 800))
+    }
+
+    main()
+}
+
 // --- Main Menu ---
 
 const actions = {
@@ -141,6 +191,7 @@ const actions = {
     DOWNLOAD_CV: 'download_cv',
     SHOW_QR: 'show_qr',
     EMAIL: 'email',
+    CHANGE_LANG: 'change_lang',
     EXIT: 'exit',
 }
 
@@ -159,6 +210,7 @@ function main() {
                     { name: `💾 ${t('menu.downloadCv')}`, value: actions.DOWNLOAD_CV },
                     { name: `📱 ${t('menu.showQr')}`, value: actions.SHOW_QR },
                     { name: `📧 ${t('menu.sendEmail')}`, value: actions.EMAIL },
+                    { name: `🌐 ${t('menu.changeLanguage')}`, value: actions.CHANGE_LANG },
                     { name: `🚪 ${t('menu.exit')}`, value: actions.EXIT },
                 ],
             },
@@ -209,6 +261,10 @@ function main() {
                 case actions.EMAIL:
                     await sendEmail()
                     setTimeout(() => process.exit(0), 1000)
+                    break
+
+                case actions.CHANGE_LANG:
+                    await changeLanguage()
                     break
 
                 case actions.EXIT:

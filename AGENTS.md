@@ -196,8 +196,9 @@ The application supports multiple languages: **English (en)**, **Portuguese (pt)
 ### Language Detection Priority
 
 1. CLI flag: `--lang=xx` (e.g., `--lang=pt`)
-2. System locale (auto-detected via `Intl.DateTimeFormat`)
-3. Fallback to English (`en`)
+2. In-app language selector (menu option "Change language")
+3. System locale (auto-detected via `Intl.DateTimeFormat`)
+4. Fallback to English (`en`)
 
 ### Adding/Editing Translations
 
@@ -246,6 +247,21 @@ const locale = getLocale() // "en", "pt", or "es"
 
 // Use locale for file paths
 const resumePath = `data/resume-${locale}.md`
+```
+
+### Dynamic Language Switching
+
+The app supports changing language at runtime via the menu:
+
+```javascript
+import { setLocale, getLocaleOptions } from '../lib/i18n.js'
+
+// Get available languages for menu
+const options = getLocaleOptions()
+// Returns: [{ code: 'en', name: 'English' }, { code: 'pt', name: 'Portugues' }, { code: 'es', name: 'Espanol' }]
+
+// Switch language dynamically
+setLocale('pt') // Returns true if successful
 ```
 
 ## Key Dependencies

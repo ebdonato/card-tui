@@ -22,7 +22,13 @@ npx ebdonato
 
 ### Multi-Language Support
 
-The CLI supports **English**, **Portuguese**, and **Spanish**. It automatically detects your system language, or you can force a specific language:
+The CLI supports **English**, **Portuguese**, and **Spanish**. It automatically detects your system language, or you can:
+
+**Change language from the menu:**
+
+Select "Change language" from the interactive menu to switch languages on the fly.
+
+**Force a specific language via CLI flag:**
 
 ```bash
 npx ebdonato --lang=en   # English
@@ -36,12 +42,13 @@ That's it! You'll see an interactive menu with options to:
 - **Download CV** - Save a PDF copy to your current directory
 - **Show QR Code** - Display a scannable QR code for mobile access
 - **Send Email** - Open your default email client to get in touch
+- **Change Language** - Switch between English, Portuguese, and Spanish
 - **Exit** - Close the application
 
 ## Features
 
 - **Zero Installation** - Works instantly via `npx`
-- **Multi-Language** - Supports English, Portuguese, and Spanish (auto-detects system locale)
+- **Multi-Language** - Supports English, Portuguese, and Spanish (auto-detects system locale or switch from menu)
 - **Interactive Menu** - Easy navigation with arrow keys
 - **Terminal-Rendered Resume** - Markdown displayed with colors and formatting
 - **PDF Download** - Get a professionally styled PDF resume

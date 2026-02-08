@@ -1,7 +1,7 @@
 {
     "header": {
         "work": "Desarrollador Full Stack | Ingeniero de Software en Dock",
-        "bio": "Soy ingeniero eléctrico y de planificación.\nActualmente soy desarrollador full stack (Vue, React, Node, Go y AWS)\ny desarrollador Microsoft Power Platform.",
+        "bio": "Soy ingeniero electrico y de planificacion.\nActualmente soy desarrollador full stack (Vue, React, Node, Go y AWS)\ny desarrollador Microsoft Power Platform.",
         "labelWork": "    Trabajo:",
         "labelTwitter": "    Twitter:",
         "labelGitHub": "     GitHub:",
@@ -14,17 +14,20 @@
         "downloadCv": "Descargar mi CV (PDF)",
         "showQr": "Mostrar QR Code",
         "sendEmail": "Enviar un correo",
+        "changeLanguage": "Cambiar idioma",
         "exit": "Salir"
     },
     "messages": {
-        "returnToMenu": "¿Volver al menú?",
-        "qrTitle": "QR Code - Acceso Móvil",
+        "returnToMenu": "Volver al menu?",
+        "qrTitle": "QR Code - Acceso Movil",
         "qrScan": "Escanea para acceder: https://navto.me/ebdonato",
-        "endOfResume": "--- Fin del Currículum ---",
-        "resumeError": "Error al leer el currículum. ¿Existe el archivo de currículum?",
-        "downloadSuccess": "¡Éxito! CV guardado en:",
-        "downloadError": "Error al guardar PDF. Asegúrese de que el archivo fue generado con 'npm run build'.",
+        "endOfResume": "--- Fin del Curriculum ---",
+        "resumeError": "Error al leer el curriculum. Existe el archivo de curriculum?",
+        "downloadSuccess": "Exito! CV guardado en:",
+        "downloadError": "Error al guardar PDF. Asegurese de que el archivo fue generado con 'npm run build'.",
         "emailOpening": "Abriendo su cliente de correo...",
-        "goodbye": "¡Gracias por visitar!"
+        "goodbye": "Gracias por visitar!",
+        "selectLanguage": "Seleccione idioma:",
+        "languageChanged": "Idioma cambiado a"
     }
 }

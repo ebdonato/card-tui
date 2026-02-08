@@ -14,6 +14,7 @@
         "downloadCv": "Download my CV (PDF)",
         "showQr": "Show QR Code",
         "sendEmail": "Send an email",
+        "changeLanguage": "Change language",
         "exit": "Exit"
     },
     "messages": {
@@ -25,6 +26,8 @@
         "downloadSuccess": "Success! CV saved to:",
         "downloadError": "Error saving PDF. Make sure the file was generated with 'npm run build'.",
         "emailOpening": "Opening your email client...",
-        "goodbye": "Thanks for visiting!"
+        "goodbye": "Thanks for visiting!",
+        "selectLanguage": "Select language:",
+        "languageChanged": "Language changed to"
     }
 }
