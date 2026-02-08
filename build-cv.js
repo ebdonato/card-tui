@@ -17,6 +17,9 @@ const options = {
         headerIds: false,
         mangle: false,
     },
+    launch_options: {
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    },
 }
 
 mdToPdf({ path: inputPath }, { dest: outputPath, ...options })
