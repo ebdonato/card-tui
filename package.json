@@ -1,7 +1,19 @@
 {
     "name": "ebdonato",
-    "version": "9.0.0",
+    "version": "9.0.1",
     "description": "Eduardo Batista Donato - CLI Card & Resume",
+    "keywords": [
+        "cli",
+        "tui",
+        "donato",
+        "card",
+        "resume",
+        "business-card",
+        "terminal",
+        "npx",
+        "interactive",
+        "developer"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/ebdonato/card-tui"

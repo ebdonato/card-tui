@@ -1,4 +1,4 @@
-# ebdonato
+# Eduardo DONATO's card business
 
 A CLI business card and resume viewer - share your professional profile directly in the terminal.
 
@@ -58,6 +58,7 @@ npm install
 
 2. **Edit `bin/index.js`**:
     - Update the `data` object with your personal information:
+
         ```javascript
         const data = {
             name: chalk.bold.green('Your Name'),
@@ -70,6 +71,7 @@ npm install
             // ... update labels and bio
         }
         ```
+
     - Update the email address in the `sendEmail()` function
 
 3. **Replace `data/resume.md`**:
@@ -131,7 +133,7 @@ Now anyone can run `npx yourusername` to see your business card!
 
 ### Project Structure
 
-```
+```text
 card-tui/
 ├── bin/
 │   └── index.js          # Main CLI application
@@ -167,12 +169,8 @@ MIT License - See [LICENSE](LICENSE) for details.
 
 ## Author
 
-**Eduardo Batista Donato**
+### **Eduardo Batista Donato**
 
 - GitHub: [@ebdonato](https://github.com/ebdonato)
 - LinkedIn: [ebdonato](https://linkedin.com/in/ebdonato)
 - Twitter: [@ebdonato](https://x.com/ebdonato)
-
----
-
-If you create your own CLI business card using this project, I'd love to see it! Feel free to open an issue or reach out.
