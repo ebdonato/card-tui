@@ -1,6 +1,6 @@
 {
     "name": "ebdonato",
-    "version": "9.2.1",
+    "version": "9.2.2",
     "description": "Eduardo Batista Donato - CLI Card & Resume",
     "keywords": [
         "cli",
@@ -40,7 +40,7 @@
         "chalk": "^5.3.0",
         "inquirer": "^9.2.11",
         "marked": "^9.1.0",
-        "marked-terminal": "^6.0.0",
+        "marked-terminal": "^7.3.0",
         "open": "^9.1.0",
         "qrcode-terminal": "^0.12.0"
     },
