@@ -1,6 +1,6 @@
 # Eduardo DONATO
 
-**Full Stack Developer | Software Engineer at [Dock](https://www.dock.tech/)**
+**👨‍💻 Electrical and Planning Engineer | Software Engineer at [Dock](https://www.dock.tech/)**
 
 ✉️ [eduardo.donato@gmail.com](mailto:eduardo.donato@gmail.com) | ☎️ +55 27 999693809 | 📍 Cachoeiro de Itapemirim, ES, Brazil
 
@@ -8,7 +8,7 @@
 
 ## Professional Summary
 
-Electrical Engineer with a postgraduate degree in Planning Engineering and Go Lang Specialist. Experience in full-stack web development, project management, and industrial measurement and control systems. Skills in Node.js, React, Vue.js, Power BI, Golang, and TypeScript. Strong leadership and team management abilities.
+Electrical and Planning Engineer with 15+ years of experience, combining a solid foundation in Engineering (UFV/UFES) with Go Lang specialization. Transitioned from managing large-scale industrial projects and teams (100+ employees) at companies like Vale, Technip, and EDP to the Fintech sector. Focused on high-performance solutions, systemic vision, and delivering results in high-complexity environments.
 
 **Skills**: Node.js, Supabase, PostgreSQL, React, Vue.js, Power BI, TypeScript, Project Management, C++, VBA, Go, AWS, Python, DDD, GraphQL, AI Software Engineering
 

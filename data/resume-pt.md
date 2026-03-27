@@ -1,6 +1,6 @@
 # Eduardo DONATO
 
-**👨‍💻 Desenvolvedor Full Stack | Engenheiro de Software na [Dock](https://www.dock.tech/)**
+**👨‍💻 Engenheiro Eletricista e de Planejamento | Engenheiro de Software na [Dock](https://www.dock.tech/)**
 
 ✉️ [eduardo.donato@gmail.com](mailto:eduardo.donato@gmail.com) | ☎️ +55 27 999693809 | 📍 Cachoeiro de Itapemirim, ES, Brasil
 
@@ -8,7 +8,7 @@
 
 ## Resumo Profissional
 
-Engenheiro Eletricista com pós-graduação em Engenharia de Planejamento e Especialista em Go Lang. Experiência em desenvolvimento web full-stack, gestão de projetos e sistemas de medição e controle industrial. Habilidades em Node.js, React, Vuejs, Power BI, Golang e TypeScript. Fortes habilidades de liderança e gestão de equipes.
+Engenheiro Eletricista e de Planejamento com 15+ anos de experiência, unindo a base sólida em Engenharia (UFV/UFES) à especialização em Go Lang. Transitei da gestão de grandes projetos industriais e equipes (100+ colaboradores) em empresas como Vale, Technip e EDP para o setor de Fintech. Focado em soluções de alta performance, visão sistêmica e entrega de resultados em ambientes de alta complexidade.
 
 **Habilidades**: Node.js, Supabase, PostgreSQL, React, Vuejs, Power BI, TypeScript, Project Management, C++, VBA, Go, AWS, Python, DDD, GraphQL, Engenharia de Software com IA
 
