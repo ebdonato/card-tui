@@ -6,7 +6,7 @@
 
 🌐 [[linkedin.com/in/ebdonato](https://www.linkedin.com/in/ebdonato)] [[github.com/ebdonato](https://github.com/ebdonato)] [[donato.vip](https://www.donato.vip)]
 
-## Resumo Profissional
+## Resumo
 
 Engenheiro Eletricista e de Planejamento com 15+ anos de experiência, unindo a base sólida em Engenharia (UFV/UFES) à especialização em Go Lang. Transitei da gestão de grandes projetos industriais e equipes (100+ colaboradores) em empresas como Vale, Technip e EDP para o setor de Fintech. Focado em soluções de alta performance, visão sistêmica e entrega de resultados em ambientes de alta complexidade.
 

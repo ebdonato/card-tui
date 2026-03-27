@@ -6,7 +6,7 @@
 
 🌐 [[linkedin.com/in/ebdonato](https://www.linkedin.com/in/ebdonato)] [[github.com/ebdonato](https://github.com/ebdonato)] [[donato.vip](https://www.donato.vip/?lang=en)]
 
-## Professional Summary
+## Summary
 
 Electrical and Planning Engineer with 15+ years of experience, combining a solid foundation in Engineering (UFV/UFES) with Go Lang specialization. Transitioned from managing large-scale industrial projects and teams (100+ employees) at companies like Vale, Technip, and EDP to the Fintech sector. Focused on high-performance solutions, systemic vision, and delivering results in high-complexity environments.
 
