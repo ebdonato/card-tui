@@ -4,6 +4,19 @@
     page-break-after: always;
 }
 
+/* Keep job headings attached to their first bullet and never split a bullet across pages */
+h2,
+h3,
+h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+}
+
+li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;

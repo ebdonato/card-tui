@@ -8,9 +8,9 @@
 
 ## Summary
 
-Full stack Software Engineer with 5 years at the fintech Dock, building financial backoffice products end to end (React, Node.js/TypeScript, and Python), with a Go specialization from Full Cycle. Nearly 20 years in engineering: before moving into software, managed industrial projects and contracts for companies like Vale, Technip, and EDP and led teams of about 100 people. This background translates into systemic vision, autonomy, and a focus on delivering results in high-complexity environments.
+Full stack Software Engineer with 5 years at the fintech Dock, building financial backoffice products end to end (React, Node.js/TypeScript, and Python) on AWS microservices, with a Go specialization from Full Cycle. Nearly 20 years in engineering: before moving into software, managed industrial projects and contracts for companies like Vale, Technip, and EDP and led teams of about 100 people. This background translates into systemic vision, autonomy, and a focus on delivering results in high-complexity environments.
 
-**Skills**: TypeScript, Node.js, React, Vue.js, Python, Go, PostgreSQL, Supabase, GraphQL, AWS, DDD, AI Software Engineering, Power BI, C++, VBA, Project Management
+**Skills**: TypeScript, Node.js, React, Vue.js, Python, Go, PostgreSQL, NoSQL, Supabase, GraphQL, REST APIs, AWS, Microservices, Event-Driven Architecture, DDD, Automated Testing, Infrastructure as Code, AI Software Engineering, Power BI, C++, VBA, Project Management
 
 **Languages**: English: Advanced | Portuguese: Native
 
@@ -20,9 +20,11 @@ Full stack Software Engineer with 5 years at the fintech Dock, building financia
 
 #### _November 2021 – Present, Remote_
 
-- Build end-to-end financial backoffice applications used by internal and external clients, with the frontend in React and the backend in JavaScript/TypeScript or Python.
-- Implement and deploy new APIs and features, with full ownership of the code.
-- Analyze business problems and demands and propose efficient technical solutions.
+- Build and evolve financial backoffice products, used by internal and external clients, within the ecosystem of Caradhras, Dock's high-performance, highly scalable platform, with the frontend in React and the backend in Node.js (JavaScript/TypeScript) or Python.
+- Build and maintain REST APIs and cloud-native microservices on AWS, in an event-driven architecture with messaging systems and PostgreSQL and NoSQL databases.
+- Implement and deploy new features with full ownership of the code, ensuring quality through automated tests, code reviews, and performance testing.
+- Take part in product conception and evolution, with proofs of concept, support for architecture design, and efficient, scalable, and robust solutions to business demands.
+- Work in an agile, 100% remote team with a DevOps culture, using automation and infrastructure as code (CloudFormation) and sharing knowledge across the team.
 
 ### **Eletromarquez** | Development Analyst
 
@@ -40,8 +42,6 @@ Full stack Software Engineer with 5 years at the fintech Dock, building financia
 - Worked on supply chain management for EDP's High Voltage Projects and Construction department, modeling, automating, improving, and implementing its processes.
 - Developed and maintained the contract's management reports with advanced use of Power BI, including SAP data extraction and processing, and created macros for SAP interaction.
 - Evaluated and implemented the project management strategy and tools.
-
-<div class="page-break"></div>
 
 ### **Eletromarquez** | Operations Coordinator
 
@@ -69,8 +69,6 @@ Full stack Software Engineer with 5 years at the fintech Dock, building financia
 - Managed and supervised maintenance and improvement works on the Vitória-Minas Railway (EFVM), implemented by Vale S.A. (GAIPG), including OPEX management and monitoring of services and physical-financial progress.
 - Ensured compliance with specifications, premises, health and safety requirements, and product quality.
 - Led planning meetings and risk analysis meetings for the works (SWOT) with contractors, and analyzed and validated schedules, work breakdown structures (WBS), physical-financial progress curves, and labor and equipment histograms.
-
-<div class="page-break"></div>
 
 ### **MCA Auditoria e Gerenciamento Ltda** | Planning Engineer
 

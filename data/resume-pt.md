@@ -8,9 +8,9 @@
 
 ## Resumo
 
-Engenheiro de Software full stack com 5 anos na fintech Dock, onde desenvolvo produtos de backoffice financeiro de ponta a ponta (React, Node.js/TypeScript e Python), e especialista em Go pela Full Cycle. São quase 20 anos de carreira em engenharia: antes de migrar para o software, gerenciei projetos industriais e contratos de empresas como Vale, Technip e EDP e liderei equipes de cerca de 100 pessoas. Essa trajetória se traduz em visão sistêmica, autonomia e foco em entregar resultados em ambientes de alta complexidade.
+Engenheiro de Software full stack com 5 anos na fintech Dock, onde desenvolvo produtos de backoffice financeiro de ponta a ponta (React, Node.js/TypeScript e Python) em microsserviços na AWS, e especialista em Go pela Full Cycle. São quase 20 anos de carreira em engenharia: antes de migrar para o software, gerenciei projetos industriais e contratos de empresas como Vale, Technip e EDP e liderei equipes de cerca de 100 pessoas. Essa trajetória se traduz em visão sistêmica, autonomia e foco em entregar resultados em ambientes de alta complexidade.
 
-**Habilidades**: TypeScript, Node.js, React, Vue.js, Python, Go, PostgreSQL, Supabase, GraphQL, AWS, DDD, Engenharia de Software com IA, Power BI, C++, VBA, Gestão de Projetos
+**Habilidades**: TypeScript, Node.js, React, Vue.js, Python, Go, PostgreSQL, NoSQL, Supabase, GraphQL, APIs REST, AWS, Microsserviços, Arquitetura Orientada a Eventos, DDD, Testes Automatizados, Infraestrutura como Código, Engenharia de Software com IA, Power BI, C++, VBA, Gestão de Projetos
 
 **Idiomas**: Inglês: Avançado | Português: Nativo
 
@@ -20,9 +20,11 @@ Engenheiro de Software full stack com 5 anos na fintech Dock, onde desenvolvo pr
 
 #### _novembro de 2021 – Presente, Remoto_
 
-- Desenvolvo, de ponta a ponta, aplicações de backoffice financeiro usadas por clientes internos e externos, com frontend em React e backend em JavaScript/TypeScript ou Python.
-- Implemento e implanto novas APIs e funcionalidades, com responsabilidade integral pelo código.
-- Analiso problemas e demandas do negócio e proponho soluções técnicas eficientes.
+- Desenvolvo e evoluo produtos de backoffice financeiro, usados por clientes internos e externos, no ecossistema da Caradhras, a plataforma de alta performance e escalabilidade da Dock, com frontend em React e backend em Node.js (JavaScript/TypeScript) ou Python.
+- Construo e mantenho APIs REST e microsserviços nativos de nuvem na AWS, em arquitetura orientada a eventos, com sistemas de mensageria e bancos de dados PostgreSQL e NoSQL.
+- Implemento e implanto novas funcionalidades com responsabilidade integral pelo código, garantindo a qualidade com testes automatizados, code reviews e testes de performance.
+- Participo da concepção e da evolução dos produtos, com provas de conceito, apoio aos desenhos de arquitetura e proposta de soluções eficientes, escaláveis e robustas para as demandas do negócio.
+- Atuo em time ágil e 100% remoto, em cultura DevOps, com automação e infraestrutura como código (CloudFormation) e compartilhamento de conhecimento com o time.
 
 ### **Eletromarquez** | Analista de Desenvolvimento
 
@@ -40,8 +42,6 @@ Engenheiro de Software full stack com 5 anos na fintech Dock, onde desenvolvo pr
 - Atuei na gestão da cadeia de suprimentos da gerência de Projetos e Construção de Alta Tensão da EDP, modelando, automatizando, aperfeiçoando e implementando seus processos.
 - Desenvolvi e mantive os relatórios gerenciais do contrato com uso avançado de Power BI, incluindo a extração e o tratamento de dados do SAP, e criei macros para interação com o SAP.
 - Avaliei e implementei a estratégia e as ferramentas de gerenciamento de projetos.
-
-<div class="page-break"></div>
 
 ### **Eletromarquez** | Coordenador de Operações
 
@@ -69,8 +69,6 @@ Engenheiro de Software full stack com 5 anos na fintech Dock, onde desenvolvo pr
 - Gerenciei e fiscalizei obras de manutenção e de melhoria da Estrada de Ferro Vitória-Minas (EFVM), implantadas pela Vale S.A. (GAIPG), incluindo a gestão do OPEX e o acompanhamento dos serviços e dos avanços físico-financeiros.
 - Assegurei o cumprimento das especificações, das premissas, das exigências de segurança e saúde e da qualidade do produto.
 - Conduzi as reuniões de planejamento e de análise de riscos das obras (SWOT) com as contratadas e analisei e validei cronogramas, estruturas analíticas de projeto (EAP), curvas de progresso físico-financeiro e histogramas de mão de obra e equipamentos.
-
-<div class="page-break"></div>
 
 ### **MCA Auditoria e Gerenciamento Ltda** | Engenheiro de Planejamento
 
