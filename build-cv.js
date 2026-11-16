@@ -1,27 +1,26 @@
-import { mdToPdf } from 'md-to-pdf'
+import fs from 'fs'
 import path from 'path'
 
-const LOCALES = ['en', 'pt', 'es']
+import { NodeCompiler } from '@myriaddreamin/typst-ts-node-compiler'
 
-const options = {
-    stylesheet: [path.resolve('assets', 'resume.css')],
-    pdf_options: {
-        format: 'A4',
-        margin: '20mm',
-        printBackground: true,
-    },
-    marked_options: {
-        headerIds: false,
-        mangle: false,
-    },
-    launch_options: {
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    },
-}
+import { parseResume } from './pdf/parse-resume.js'
+
+const LOCALES = ['en', 'pt', 'es']
+const WORKSPACE_PATH = path.resolve('pdf')
+const TEMPLATE_PATH = path.join(WORKSPACE_PATH, 'template.typ')
+const FONTS_PATH = path.join(WORKSPACE_PATH, 'fonts')
 
 console.log('🔄 Generating PDFs for all languages...\n')
 
-async function generateAllPdfs() {
+/**
+ * Builds one PDF per locale: Markdown -> structured data -> Typst template -> PDF
+ * @returns {void}
+ */
+function generateAllPdfs() {
+    const compiler = NodeCompiler.create({
+        workspace: WORKSPACE_PATH,
+        fontArgs: [{ fontPaths: [FONTS_PATH] }],
+    })
     let hasError = false
 
     for (const locale of LOCALES) {
@@ -31,10 +30,16 @@ async function generateAllPdfs() {
         console.log(`📄 Generating ${locale.toUpperCase()} PDF...`)
 
         try {
-            await mdToPdf({ path: inputPath }, { dest: outputPath, ...options })
+            const resume = parseResume(fs.readFileSync(inputPath, 'utf8'), locale)
+            const pdf = compiler.pdf({
+                mainFilePath: TEMPLATE_PATH,
+                inputs: { data: JSON.stringify(resume) },
+            })
+
+            fs.writeFileSync(outputPath, pdf)
             console.log(`   ✅ Created: assets/resume-${locale}.pdf`)
         } catch (error) {
-            console.error(`   ❌ Error generating ${locale} PDF:`, error.message)
+            console.error(`   ❌ Error generating ${locale} PDF:`, error.message ?? error)
             hasError = true
         }
     }

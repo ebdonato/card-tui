@@ -177,8 +177,12 @@ card-tui/
 │   ├── resume-en.md      # English resume content
 │   ├── resume-pt.md      # Portuguese resume content
 │   └── resume-es.md      # Spanish resume content
+├── pdf/
+│   ├── template.typ      # PDF design (Typst template, design tokens at the top)
+│   ├── parse-resume.js   # Parses resume Markdown into structured data for the template
+│   ├── fonts/            # Source Sans 3 (OFL), embedded in the PDFs
+│   └── icons/            # Tabler Icons (MIT) used for the contact line
 ├── assets/
-│   ├── resume.css        # PDF styling
 │   ├── resume-en.pdf     # Generated English PDF (created by npm run build)
 │   ├── resume-pt.pdf     # Generated Portuguese PDF (created by npm run build)
 │   └── resume-es.pdf     # Generated Spanish PDF (created by npm run build)
@@ -266,15 +270,33 @@ setLocale('pt') // Returns true if successful
 
 ## Key Dependencies
 
-| Package                      | Purpose                                        |
-| ---------------------------- | ---------------------------------------------- |
-| `chalk`                      | Terminal string styling (colors, bold, italic) |
-| `inquirer`                   | Interactive command-line prompts               |
-| `boxen`                      | Create boxes in terminal                       |
-| `marked` + `marked-terminal` | Render Markdown in terminal                    |
-| `qrcode-terminal`            | Generate QR codes in terminal                  |
-| `open`                       | Open URLs/files in default application         |
-| `md-to-pdf`                  | Convert Markdown to PDF (dev dependency)       |
+| Package                                 | Purpose                                                |
+| --------------------------------------- | ------------------------------------------------------ |
+| `chalk`                                 | Terminal string styling (colors, bold, italic)         |
+| `inquirer`                              | Interactive command-line prompts                       |
+| `boxen`                                 | Create boxes in terminal                               |
+| `marked` + `marked-terminal`            | Render Markdown in terminal                            |
+| `qrcode-terminal`                       | Generate QR codes in terminal                          |
+| `open`                                  | Open URLs/files in default application                 |
+| `@myriaddreamin/typst-ts-node-compiler` | Typst compiler that typesets the PDFs (dev dependency) |
+
+## PDF Generation
+
+`npm run build` runs `build-cv.js`, which for each locale:
+
+1. Parses `data/resume-{lang}.md` with `parseResume()` (`pdf/parse-resume.js`, built on `marked.lexer`)
+2. Passes the result as JSON to `pdf/template.typ` through `sys.inputs.data`
+3. Writes `assets/resume-{lang}.pdf`
+
+The Markdown files stay the single source of truth (they also feed the terminal view). The parser
+relies on their structure and fails the build with a clear message when it is broken:
+
+- `# Name`, then a tagline paragraph and contact paragraphs (emojis become vector icons in the PDF)
+- `## Section` — paragraphs, `**Label**: a, b, c` lines (rendered as tags), or a bullet list
+- `### **Company** | Role` followed by `#### _Period, Location_` and a bullet list
+
+Change the look only in `pdf/template.typ`; text reaches Typst as data, so no escaping is needed in
+the Markdown.
 
 ## Common Patterns
 

@@ -102,7 +102,10 @@ npm install
     - Translate UI strings (menu labels, messages, header text)
 
 5. **Customize PDF styling** (optional):
-    - Edit `assets/resume.css` to change the PDF appearance
+    - Edit `pdf/template.typ` ([Typst](https://typst.app/)) to change the PDF appearance — colors, fonts
+      and sizes are variables at the top of the file
+    - The PDF is built from the same Markdown, so keep its structure: `# Name`, a tagline paragraph,
+      contact paragraphs, `## Section`, `### Company | Role`, `#### _Period, Location_` and bullet lists
 
 ### Step 3: Build and Test
 
@@ -171,10 +174,14 @@ card-tui/
 │   ├── resume-pt.md      # Portuguese resume
 │   └── resume-es.md      # Spanish resume
 ├── assets/
-│   ├── resume.css        # PDF styling
 │   ├── resume-en.pdf     # Generated English PDF
 │   ├── resume-pt.pdf     # Generated Portuguese PDF
 │   └── resume-es.pdf     # Generated Spanish PDF
+├── pdf/
+│   ├── template.typ      # PDF design (Typst template)
+│   ├── parse-resume.js   # Markdown -> structured data for the template
+│   ├── fonts/            # Fonts embedded in the PDF
+│   └── icons/            # Contact icons
 ├── build-cv.js           # PDF generation script (all languages)
 ├── package.json          # Package configuration
 └── AGENTS.md             # Guidelines for AI coding agents
@@ -188,7 +195,7 @@ card-tui/
 - **[marked](https://github.com/markedjs/marked)** + **[marked-terminal](https://github.com/mikaelbr/marked-terminal)** - Render Markdown in terminal
 - **[qrcode-terminal](https://github.com/gtanner/qrcode-terminal)** - Generate QR codes
 - **[open](https://github.com/sindresorhus/open)** - Open URLs/files in default application
-- **[md-to-pdf](https://github.com/simonhaenisch/md-to-pdf)** - Convert Markdown to PDF
+- **[Typst](https://typst.app/)** (via [typst.ts](https://github.com/Myriad-Dreamin/typst.ts)) - Typeset the PDF resume from Markdown
 
 ## Inspiration
 

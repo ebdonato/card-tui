@@ -46,11 +46,11 @@
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
+        "@myriaddreamin/typst-ts-node-compiler": "^0.7.0",
         "eslint": "^10.15.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-prettier": "^5.5.7",
         "globals": "^17.14.0",
-        "md-to-pdf": "^5.2.5",
         "prettier": "^3.10.1"
     }
 }

@@ -12,9 +12,9 @@ eslint.config.js
 # Documentation not needed in package
 AGENTS.md
 
-# Build script (only needed for development)
+# Build script, Typst template, fonts and icons (only needed for development)
 build-cv.js
+pdf/
 
 # Assets not needed in package (only PDF files are needed)
 assets/.gitkeep
-assets/resume.css
