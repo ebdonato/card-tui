@@ -2,7 +2,7 @@
 
 **👨‍💻 Engenheiro Eletricista e de Planejamento | Engenheiro de Software na [Dock](https://www.dock.tech/)**
 
-✉️ [eduardo.donato@gmail.com](mailto:eduardo.donato@gmail.com) | ☎️ +55 27 999693809 | 📍 Cachoeiro de Itapemirim, ES, Brasil
+✉️ [eduardo.donato@gmail.com](mailto:eduardo.donato@gmail.com) | ☎️ +55 27 999693809 | 📍 Vitória, ES, Brasil
 
 🌐 [[linkedin.com/in/ebdonato](https://www.linkedin.com/in/ebdonato)] [[github.com/ebdonato](https://github.com/ebdonato)] [[donato.vip](https://www.donato.vip)]
 
