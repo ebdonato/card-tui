@@ -8,9 +8,9 @@
 
 ## Resumo
 
-Engenheiro Eletricista e de Planejamento com 15+ anos de experiência, unindo a base sólida em Engenharia (UFV/UFES) à especialização em Go Lang. Transitei da gestão de grandes projetos industriais e equipes (100+ colaboradores) em empresas como Vale, Technip e EDP para o setor de Fintech. Focado em soluções de alta performance, visão sistêmica e entrega de resultados em ambientes de alta complexidade.
+Engenheiro de Software full stack com 5 anos na fintech Dock, onde desenvolvo produtos de backoffice financeiro de ponta a ponta (React, Node.js/TypeScript e Python), e especialista em Go pela Full Cycle. São quase 20 anos de carreira em engenharia: antes de migrar para o software, gerenciei projetos industriais e contratos de empresas como Vale, Technip e EDP e liderei equipes de cerca de 100 pessoas. Essa trajetória se traduz em visão sistêmica, autonomia e foco em entregar resultados em ambientes de alta complexidade.
 
-**Habilidades**: Node.js, Supabase, PostgreSQL, React, Vuejs, Power BI, TypeScript, Project Management, C++, VBA, Go, AWS, Python, DDD, GraphQL, Engenharia de Software com IA
+**Habilidades**: TypeScript, Node.js, React, Vue.js, Python, Go, PostgreSQL, Supabase, GraphQL, AWS, DDD, Engenharia de Software com IA, Power BI, C++, VBA, Gestão de Projetos
 
 **Idiomas**: Inglês: Avançado | Português: Nativo
 
@@ -18,21 +18,28 @@ Engenheiro Eletricista e de Planejamento com 15+ anos de experiência, unindo a 
 
 ### **Dock** | Engenheiro de Software
 
-#### _novembro de 2021 (Presente), Anywhere_
+#### _novembro de 2021 – Presente, Remoto_
 
-Desenvolvimento de aplicações de produtos de backoffice financeiro para os clientes finais internos ou externos, incluindo o frontend em React e o backend em Javascpript/Typescript ou em Python, incluindo a implementação e implantação de novas APIs e funcionalidades, sendo totalmente responsável pelos seus código, além de analisar situações e propor soluções eficientes.
+- Desenvolvo, de ponta a ponta, aplicações de backoffice financeiro usadas por clientes internos e externos, com frontend em React e backend em JavaScript/TypeScript ou Python.
+- Implemento e implanto novas APIs e funcionalidades, com responsabilidade integral pelo código.
+- Analiso problemas e demandas do negócio e proponho soluções técnicas eficientes.
 
 ### **Eletromarquez** | Analista de Desenvolvimento
 
 #### _abril de 2020 – novembro de 2021, Aracruz, ES_
 
-Responsável pela automatização de processos rotineiros e/ou repetitivos através do desenvolvimento de aplicativos e scripts (robôs). Desenvolvimento de aplicativos em Excel (macro/VBA), relacionando planilhas internas e relatórios do SAP, e de aplicativos para o usuário final com Microsoft Power Platform (Power Apps e Sharepoint). Responsável pela modelagem, desenvolvimento e implantação de um Sistema Integrado de Gestão Empresarial (ERP) através de tecnologias web modernas (Html, CSS, Javascript [VueJS e NodeJS] e Banco de Dados [PostgreSQL]). Responsável pelo desenvolvimento e manutenção dos relatórios gerenciais dos contratos com Microsoft Power BI.
+- Modelei, desenvolvi e implantei um Sistema Integrado de Gestão Empresarial (ERP) com tecnologias web modernas: HTML, CSS, JavaScript (Vue.js e Node.js) e banco de dados PostgreSQL.
+- Automatizei processos rotineiros e repetitivos com aplicativos e scripts (robôs), incluindo aplicações em Excel (macro/VBA) que relacionavam planilhas internas e relatórios do SAP.
+- Criei aplicativos para o usuário final com Microsoft Power Platform (Power Apps e SharePoint).
+- Desenvolvi e mantive os relatórios gerenciais dos contratos em Power BI.
 
 ### **Time-Now Engenharia S/A** | Analista de Planejamento
 
 #### _agosto de 2019 – março de 2020, Vitória, ES_
 
-Gestão da cadeia de suprimentos da gerência de Projetos e Construção de Alta Tensão da EDP. Modelagem, automatização, aperfeiçoamento e implementação de processos na gestão da cadeia de suprimentos. Responsável pelo desenvolvimento e manutenção dos relatórios gerenciais do contrato com uso avançado da ferramenta Power BI, incluindo a extração e o tratamento de dados do SAP. Desenvolvimento de macros para interação com SAP. Avaliação e implementação da estratégia e das ferramentas de gerenciamento de projetos.
+- Atuei na gestão da cadeia de suprimentos da gerência de Projetos e Construção de Alta Tensão da EDP, modelando, automatizando, aperfeiçoando e implementando seus processos.
+- Desenvolvi e mantive os relatórios gerenciais do contrato com uso avançado de Power BI, incluindo a extração e o tratamento de dados do SAP, e criei macros para interação com o SAP.
+- Avaliei e implementei a estratégia e as ferramentas de gerenciamento de projetos.
 
 <div class="page-break"></div>
 
@@ -40,42 +47,51 @@ Gestão da cadeia de suprimentos da gerência de Projetos e Construção de Alta
 
 #### _março de 2017 – agosto de 2019, Cariacica, ES_
 
-Gestão de equipe de leituristas (medição do consumo e faturamento de energia) a serviço da EDP ES, realizando a programação da distribuição da equipe nas rotas diárias, a análise crítica da produtividade, da efetividade e da qualidade das leituras e das faturas entregues aos clientes da contratante e também promover e garantir que as atividades sejam realizadas conforme planejado. Gestão de equipe de aproximadamente 100 colaboradores.
-Responsável por um dos contratos com a EDP, liderando dois centros de leitura (Cariacica/Viana e Vila Velha), com elaboração de relatórios de status e indicadores de performance contratuais, de qualidade e de produção (KPI’s), e gestão da equipe interna de apoio aos colaboradores externos e dos procedimentos operacionais do contrato.
-Desenvolvimento e aprimoramento de ferramentas computacionais para automatização de processos (relatórios e índices) e otimização da atividade fim, através de programação macro Excel (VBA) e aplicativos Android.
+- Liderei cerca de 100 colaboradores em dois centros de leitura (Cariacica/Viana e Vila Velha), responsáveis pela medição do consumo e pelo faturamento de energia a serviço da EDP ES.
+- Respondi por um dos contratos com a EDP: programação da distribuição da equipe nas rotas diárias e análise crítica da produtividade, da efetividade e da qualidade das leituras e das faturas entregues, garantindo a execução das atividades conforme o planejado.
+- Elaborei os relatórios de status e os indicadores de performance contratuais, de qualidade e de produção (KPIs) e coordenei a equipe interna de apoio aos colaboradores externos e os procedimentos operacionais do contrato.
+- Desenvolvi e aprimorei ferramentas computacionais para automatizar processos (relatórios e índices) e otimizar a atividade-fim, com macros Excel (VBA) e aplicativos Android.
 
 ### **Technip** | Engenheiro de Projetos
 
 #### _maio de 2013 – outubro de 2016, Vitória, ES_
 
-Gestão de contratos, firmados ou em propostas, de fabricação de tubos flexíveis recebendo as premissas, efetuando a análise crítica e enviando para o planejamento da produção. Acompanhamento do desenvolvimento de projeto, desde aquisição de matérias primas até a entrega ao cliente do produto final e documentos relacionados, participando de reuniões de planejamento, verificando e resolvendo os problemas eventuais, propondo e aplicando ações preventivas e corretivas. Promover reuniões rotineiras e extraordinárias com vários departamentos de uma ou mais unidades do grupo, pontuando todas as possíveis dificuldades, mudanças, necessidades e desafios do projeto.
-Interface com outras áreas e unidades do grupo, no Brasil ou no exterior, visando solucionar problemas inerentes aos projetos e estimar prazos e possibilidades de carga para a fábrica. Gestão de conflitos de prioridade entre projetos de longo prazo, apresentando soluções, dando sugestões de acordo com análise crítica do planejamento, com o objetivo de definir os novos parâmetros.
+- Gerenciei contratos de fabricação de tubos flexíveis, firmados ou em fase de proposta, recebendo as premissas, fazendo a análise crítica e encaminhando ao planejamento da produção.
+- Acompanhei o desenvolvimento dos projetos, da aquisição de matérias-primas à entrega do produto final e da documentação ao cliente, participando das reuniões de planejamento, resolvendo problemas e propondo e aplicando ações preventivas e corretivas.
+- Conduzi reuniões rotineiras e extraordinárias com departamentos de uma ou mais unidades do grupo, tratando dificuldades, mudanças, necessidades e desafios dos projetos.
+- Fiz a interface com outras áreas e unidades do grupo, no Brasil e no exterior, para solucionar problemas dos projetos e estimar prazos e possibilidades de carga para a fábrica.
+- Mediei conflitos de prioridade entre projetos de longo prazo, propondo soluções com base na análise crítica do planejamento para definir os novos parâmetros.
 
 ### **DUCTOR Implantação de Projetos S.A.** | Engenheiro de Planejamento
 
 #### _novembro de 2012 – maio de 2013, Vitória, ES_
 
-Gerenciamento e fiscalização das obras de manutenção e de melhoria da Estrada de Ferro Vitória-Minas (EFVM), implantadas pela Vale S.A. (GAIPG), gestão do OPEX, realizando o acompanhamento dos serviços e dos avanços físico-financeiros, além da garantia do cumprimento das especificações, das premissas, das exigências de segurança e saúde e da qualidade do produto. Responsável por promover as reuniões de planejamento e as reuniões de análises de riscos das obras (análise SWOT) com as contratadas. E também a análise e a validação dos cronogramas, estruturas analíticas de projeto (EAP), curvas de progresso físico-financeiro, histogramas de mão-de-obra e equipamentos apresentados.
+- Gerenciei e fiscalizei obras de manutenção e de melhoria da Estrada de Ferro Vitória-Minas (EFVM), implantadas pela Vale S.A. (GAIPG), incluindo a gestão do OPEX e o acompanhamento dos serviços e dos avanços físico-financeiros.
+- Assegurei o cumprimento das especificações, das premissas, das exigências de segurança e saúde e da qualidade do produto.
+- Conduzi as reuniões de planejamento e de análise de riscos das obras (SWOT) com as contratadas e analisei e validei cronogramas, estruturas analíticas de projeto (EAP), curvas de progresso físico-financeiro e histogramas de mão de obra e equipamentos.
+
+<div class="page-break"></div>
 
 ### **MCA Auditoria e Gerenciamento Ltda** | Engenheiro de Planejamento
 
 #### _junho de 2012 – novembro de 2012, Vitória, ES_
 
-Gestão do desenvolvimento do projeto do Complexo Portuário do Espadarte, um projeto de capital da Vale S.A. (GAPON), de acordo com a metodologia Front-End Loading (FEL), com a elaboração, a integração e o controle de documentos de planejamento e das ferramentas e das técnicas da metodologia. Responsável pela integração das informações das demais contratadas responsáveis pela execução do projeto, elaborando relatórios e reuniões de acompanhamento.
+- Atuei na gestão do desenvolvimento do projeto do Complexo Portuário do Espadarte, projeto de capital da Vale S.A. (GAPON), conforme a metodologia Front-End Loading (FEL), elaborando, integrando e controlando os documentos de planejamento e as ferramentas e técnicas da metodologia.
+- Integrei as informações das demais contratadas responsáveis pela execução do projeto, elaborando relatórios e conduzindo reuniões de acompanhamento.
 
 ### **DUCTOR Implantação de Projetos S.A.** | Engenheiro de Planejamento
 
 #### _agosto de 2011 – junho de 2012, Vitória, ES_
 
-Elaboração do plano de execução do projeto (PEP), participando do desenvolvimento e da avaliação dos projetos de obras de arte especiais da Estrada de Ferro Vitória-Minas (EFVM), implantadas pela Vale S.A. (GAIPG), conforme a metodologia Front-End Loading (FEL).
-Gerenciamento e fiscalização das obras de manutenção e de melhoria da Estrada de Ferro Vitória-Minas (EFVM), implantadas pela Vale S.A. (GAIPG), gestão do OPEX, realizando o acompanhamento dos serviços e dos avanços físico-financeiros, além da garantia do cumprimento das especificações, das premissas, das exigências de segurança e saúde e da qualidade do produto. Responsável por promover as reuniões de planejamento e as reuniões de análises de riscos das obras (análise SWOT) com as contratadas. E também a análise e a validação dos cronogramas, estruturas analíticas de projeto (EAP), curvas de progresso físico-financeiro, histogramas de mão-de-obra e equipamentos apresentados.
+- Elaborei o plano de execução do projeto (PEP) e participei do desenvolvimento e da avaliação dos projetos de obras de arte especiais da EFVM, implantadas pela Vale S.A. (GAIPG), conforme a metodologia Front-End Loading (FEL).
+- Também gerenciei e fiscalizei as obras de manutenção e de melhoria da ferrovia: gestão do OPEX, acompanhamento dos serviços e dos avanços físico-financeiros, exigências de segurança, saúde e qualidade, reuniões de planejamento e de análise de riscos (SWOT) e validação de cronogramas, EAPs, curvas de progresso e histogramas das contratadas.
 
 ### **Tozato Measurements** | Engenheiro Eletricista
 
 #### _junho de 2007 – julho de 2011, Vitória, ES_
 
-Desenvolvimento de novos equipamentos de instrumentação e controle e também o aperfeiçoamento dos existentes, criando e executando os projetos do hardware (microeletrônica / microprocessamento) e do software (programação alto nível / aplicativos para computador), relacionados a processos siderúrgicos.
-Participação em projetos de implantação dos equipamentos nas plantas industriais (siderurgias), em empresas nacionais e internacionais (Itália, Alemanha, Romênia, etc.), promovendo os ajustes personalizados para cada cliente e acompanhando os respectivos comissionamentos.
+- Desenvolvi novos equipamentos de instrumentação e controle para processos siderúrgicos e aperfeiçoei os existentes, criando e executando os projetos de hardware (microeletrônica e microprocessamento) e de software (programação em alto nível e aplicativos para computador).
+- Participei de projetos de implantação dos equipamentos em plantas siderúrgicas de empresas nacionais e internacionais (Itália, Alemanha, Romênia, etc.), fazendo os ajustes personalizados para cada cliente e acompanhando os comissionamentos.
 
 ## **Formação Acadêmica**
 
