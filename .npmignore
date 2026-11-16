@@ -1,5 +1,5 @@
 # Dev configuration files
-.eslintrc.json
+eslint.config.js
 .prettierrc.json
 .prettierignore
 

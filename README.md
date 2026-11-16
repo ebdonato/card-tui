@@ -140,7 +140,7 @@ Now anyone can run `npx yourusername` to see your business card!
 
 ### Prerequisites
 
-- Node.js (v18 or higher recommended)
+- Node.js (v22 or higher)
 - npm
 
 ### Commands

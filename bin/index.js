@@ -9,7 +9,7 @@ import boxen from 'boxen'
 import qrcode from 'qrcode-terminal'
 import open from 'open'
 import { marked } from 'marked'
-import TerminalRenderer from 'marked-terminal'
+import { markedTerminal } from 'marked-terminal'
 import { init as initI18n, t, getLocale, setLocale, getLocaleOptions } from '../lib/i18n.js'
 
 // --- Initialize i18n ---
@@ -107,13 +107,13 @@ function showResume() {
     console.clear()
 
     // Configure marked to use terminal colors and styles
-    marked.setOptions({
-        renderer: new TerminalRenderer({
+    marked.use(
+        markedTerminal({
             width: 80,
             reflowText: true,
             showSectionPrefix: false,
         }),
-    })
+    )
 
     try {
         const resumeContent = fs.readFileSync(getResumePath(), 'utf8')
@@ -121,7 +121,7 @@ function showResume() {
             /<div class="page-break"><\/div>/g,
             '',
         )
-        console.log(marked(resumeContentWithoutDivs))
+        console.log(marked.parse(resumeContentWithoutDivs))
 
         console.log(chalk.dim(`\n${t('messages.endOfResume')}\n`))
     } catch (_err) {
@@ -173,7 +173,7 @@ async function changeLanguage() {
 
     const answer = await inquirer.prompt([
         {
-            type: 'list',
+            type: 'select',
             name: 'locale',
             message: t('messages.selectLanguage'),
             prefix: chalk.green('🌐'),
@@ -208,7 +208,7 @@ function main() {
     inquirer
         .prompt([
             {
-                type: 'list',
+                type: 'select',
                 name: 'action',
                 message: t('menu.select'),
                 prefix: chalk.green('?'),

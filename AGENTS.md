@@ -89,10 +89,10 @@ Configuration in `.prettierrc.json`:
 
 ### Linting (ESLint)
 
-Configuration in `.eslintrc.json`:
+Configuration in `eslint.config.js` (flat config):
 
-- Extends: `eslint:recommended` and `plugin:prettier/recommended`
-- Environment: Node.js, ES2022
+- Extends: `@eslint/js` recommended and `eslint-plugin-prettier/recommended`
+- Environment: Node.js globals (via `globals` package), ES2022, ESM
 - `console.log` is allowed (`"no-console": "off"`)
 - Unused variables must be prefixed with `_` (e.g., `_err`, `_unused`)
 
@@ -184,7 +184,7 @@ card-tui/
 │   └── resume-es.pdf     # Generated Spanish PDF (created by npm run build)
 ├── build-cv.js           # PDF generation script (generates all languages)
 ├── package.json          # Package configuration
-├── .eslintrc.json        # ESLint configuration
+├── eslint.config.js      # ESLint flat configuration
 ├── .prettierrc.json      # Prettier configuration
 └── .prettierignore       # Files excluded from formatting
 ```
