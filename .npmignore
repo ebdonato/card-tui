@@ -17,5 +17,4 @@ build-cv.js
 
 # Assets not needed in package (only PDF files are needed)
 assets/.gitkeep
-assets/preview.png
 assets/resume.css
