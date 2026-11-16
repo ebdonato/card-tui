@@ -10,7 +10,7 @@
 #let hairline = rgb("#cfd8df")
 #let tag-fill = rgb("#eaf1f5")
 #let body-font = "Source Sans 3"
-#let base-size = 9.5pt
+#let base-size = 10pt
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 #let plain(runs) = runs.map(r => r.text).join()
@@ -117,7 +117,7 @@
     .flatten(),
 ))
 
-#let bullet(runs) = block(breakable: false, above: 0.55em, below: 0.55em, grid(
+#let bullet(runs) = block(breakable: false, above: 0.64em, below: 0.64em, grid(
   columns: (1.1em, 1fr),
   text(fill: accent, weight: "bold", sym.bullet),
   render-runs(runs),
@@ -172,11 +172,9 @@
   },
 )
 
-#set text(font: body-font, size: base-size, fill: ink, lang: data.lang, hyphenate: true)
-#set par(justify: true, leading: 0.56em, spacing: 0.75em)
+#set text(font: body-font, size: base-size, fill: ink, lang: data.lang, hyphenate: false)
+#set par(justify: true, leading: 0.62em, spacing: 0.8em)
 #show link: set text(fill: accent)
-// Never hyphenate camel-cased product names (TypeScript, PostgreSQL, CloudFormation...)
-#show regex("\p{L}*\p{Ll}\p{Lu}\p{L}*"): set text(hyphenate: false)
 
 // ── Header ──────────────────────────────────────────────────────────────────
 #block(below: 0.9em, {
