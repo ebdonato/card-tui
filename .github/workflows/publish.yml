@@ -7,7 +7,7 @@ on:
 
 permissions:
     id-token: write # Required for OIDC
-    contents: read
+    contents: write # Required to create the GitHub release
 
 jobs:
     publish:
@@ -21,3 +21,10 @@ jobs:
                   registry-url: 'https://registry.npmjs.org'
             - run: npm ci
             - run: npm publish
+
+            - name: Create GitHub release with PDFs
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              run: |
+                  VERSION="v$(node -p "require('./package.json').version")"
+                  gh release create "$VERSION" assets/*.pdf --title "$VERSION" --generate-notes
