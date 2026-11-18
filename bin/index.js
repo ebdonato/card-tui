@@ -25,14 +25,14 @@ const rootDir = path.join(__dirname, '..')
  * Gets the resume path for the current locale
  */
 function getResumePath() {
-    return path.join(rootDir, 'data', `resume-${getLocale()}.md`)
+    return path.join(rootDir, 'data', `cv-eduardo-donato-${getLocale()}.md`)
 }
 
 /**
  * Gets the PDF path for the current locale
  */
 function getPdfPath() {
-    return path.join(rootDir, 'assets', `resume-${getLocale()}.pdf`)
+    return path.join(rootDir, 'assets', `cv-eduardo-donato-${getLocale()}.pdf`)
 }
 
 /**

@@ -1,4 +1,4 @@
-// Resume template. Content comes from data/resume-{locale}.md, parsed by pdf/parse-resume.js
+// Resume template. Content comes from data/cv-eduardo-donato-{locale}.md, parsed by pdf/parse-resume.js
 // and handed over as JSON through `sys.inputs.data` (see build-cv.js).
 
 #let data = json(bytes(sys.inputs.data))

@@ -174,18 +174,18 @@ card-tui/
 │   ├── pt.json           # Portuguese UI strings
 │   └── es.json           # Spanish UI strings
 ├── data/
-│   ├── resume-en.md      # English resume content
-│   ├── resume-pt.md      # Portuguese resume content
-│   └── resume-es.md      # Spanish resume content
+│   ├── cv-eduardo-donato-en.md      # English resume content
+│   ├── cv-eduardo-donato-pt.md      # Portuguese resume content
+│   └── cv-eduardo-donato-es.md      # Spanish resume content
 ├── pdf/
 │   ├── template.typ      # PDF design (Typst template, design tokens at the top)
 │   ├── parse-resume.js   # Parses resume Markdown into structured data for the template
 │   ├── fonts/            # Source Sans 3 (OFL), embedded in the PDFs
 │   └── icons/            # Tabler Icons (MIT) used for the contact line
 ├── assets/
-│   ├── resume-en.pdf     # Generated English PDF (created by npm run build)
-│   ├── resume-pt.pdf     # Generated Portuguese PDF (created by npm run build)
-│   └── resume-es.pdf     # Generated Spanish PDF (created by npm run build)
+│   ├── cv-eduardo-donato-en.pdf     # Generated English PDF (created by npm run build)
+│   ├── cv-eduardo-donato-pt.pdf     # Generated Portuguese PDF (created by npm run build)
+│   └── cv-eduardo-donato-es.pdf     # Generated Spanish PDF (created by npm run build)
 ├── build-cv.js           # PDF generation script (generates all languages)
 ├── package.json          # Package configuration
 ├── eslint.config.js      # ESLint flat configuration
@@ -229,11 +229,11 @@ The application supports multiple languages: **English (en)**, **Portuguese (pt)
 }
 ```
 
-**Resume Content** is stored in `data/resume-{lang}.md`:
+**Resume Content** is stored in `data/cv-eduardo-donato-{lang}.md`:
 
-- `resume-en.md` - English resume
-- `resume-pt.md` - Portuguese resume
-- `resume-es.md` - Spanish resume
+- `cv-eduardo-donato-en.md` - English resume
+- `cv-eduardo-donato-pt.md` - Portuguese resume
+- `cv-eduardo-donato-es.md` - Spanish resume
 
 ### Using Translations in Code
 
@@ -250,7 +250,7 @@ console.log(t('menu.viewCv')) // "View my CV (Terminal)"
 const locale = getLocale() // "en", "pt", or "es"
 
 // Use locale for file paths
-const resumePath = `data/resume-${locale}.md`
+const resumePath = `data/cv-eduardo-donato-${locale}.md`
 ```
 
 ### Dynamic Language Switching
@@ -284,9 +284,9 @@ setLocale('pt') // Returns true if successful
 
 `npm run build` runs `build-cv.js`, which for each locale:
 
-1. Parses `data/resume-{lang}.md` with `parseResume()` (`pdf/parse-resume.js`, built on `marked.lexer`)
+1. Parses `data/cv-eduardo-donato-{lang}.md` with `parseResume()` (`pdf/parse-resume.js`, built on `marked.lexer`)
 2. Passes the result as JSON to `pdf/template.typ` through `sys.inputs.data`
-3. Writes `assets/resume-{lang}.pdf`
+3. Writes `assets/cv-eduardo-donato-{lang}.pdf`
 
 The Markdown files stay the single source of truth (they also feed the terminal view). The parser
 relies on their structure and fails the build with a clear message when it is broken:

@@ -92,9 +92,9 @@ npm install
 
     - Update the email address in the `sendEmail()` function
 
-3. **Replace `data/resume-{lang}.md`**:
+3. **Replace `data/cv-eduardo-donato-{lang}.md`**:
     - Write your resume in Markdown format for each language
-    - Files: `resume-en.md`, `resume-pt.md`, `resume-es.md`
+    - Files: `cv-eduardo-donato-en.md`, `cv-eduardo-donato-pt.md`, `cv-eduardo-donato-es.md`
     - This content is displayed in the terminal and converted to PDF
 
 4. **Update `locales/*.json`**:
@@ -170,13 +170,13 @@ card-tui/
 │   ├── pt.json           # Portuguese UI strings
 │   └── es.json           # Spanish UI strings
 ├── data/
-│   ├── resume-en.md      # English resume
-│   ├── resume-pt.md      # Portuguese resume
-│   └── resume-es.md      # Spanish resume
+│   ├── cv-eduardo-donato-en.md      # English resume
+│   ├── cv-eduardo-donato-pt.md      # Portuguese resume
+│   └── cv-eduardo-donato-es.md      # Spanish resume
 ├── assets/
-│   ├── resume-en.pdf     # Generated English PDF
-│   ├── resume-pt.pdf     # Generated Portuguese PDF
-│   └── resume-es.pdf     # Generated Spanish PDF
+│   ├── cv-eduardo-donato-en.pdf     # Generated English PDF
+│   ├── cv-eduardo-donato-pt.pdf     # Generated Portuguese PDF
+│   └── cv-eduardo-donato-es.pdf     # Generated Spanish PDF
 ├── pdf/
 │   ├── template.typ      # PDF design (Typst template)
 │   ├── parse-resume.js   # Markdown -> structured data for the template

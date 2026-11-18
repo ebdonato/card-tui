@@ -204,7 +204,7 @@ function parseSection(section, locale) {
     let entry = null
 
     const fail = (message) => {
-        throw new Error(`resume-${locale}.md, section "${title}": ${message}`)
+        throw new Error(`cv-eduardo-donato-${locale}.md, section "${title}": ${message}`)
     }
 
     for (const token of section.tokens) {
@@ -251,7 +251,7 @@ function parseSection(section, locale) {
 
 /**
  * Parses a resume markdown file into the structured data consumed by the Typst template
- * @param {string} markdown - Content of data/resume-{locale}.md
+ * @param {string} markdown - Content of data/cv-eduardo-donato-{locale}.md
  * @param {string} locale - Locale code, used for hyphenation and error messages
  * @returns {object}
  */
@@ -260,10 +260,10 @@ export function parseResume(markdown, locale) {
 
     const nameToken = header.find((token) => token.type === 'heading' && token.depth === 1)
     if (!nameToken) {
-        throw new Error(`resume-${locale}.md: missing the "# Name" heading`)
+        throw new Error(`cv-eduardo-donato-${locale}.md: missing the "# Name" heading`)
     }
     if (!sections.length) {
-        throw new Error(`resume-${locale}.md: no "## Section" headings found`)
+        throw new Error(`cv-eduardo-donato-${locale}.md: no "## Section" headings found`)
     }
 
     const [taglineToken, ...contactTokens] = header.filter((token) => token.type === 'paragraph')

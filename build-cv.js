@@ -24,8 +24,8 @@ function generateAllPdfs() {
     let hasError = false
 
     for (const locale of LOCALES) {
-        const inputPath = path.resolve('data', `resume-${locale}.md`)
-        const outputPath = path.resolve('assets', `resume-${locale}.pdf`)
+        const inputPath = path.resolve('data', `cv-eduardo-donato-${locale}.md`)
+        const outputPath = path.resolve('assets', `cv-eduardo-donato-${locale}.pdf`)
 
         console.log(`📄 Generating ${locale.toUpperCase()} PDF...`)
 
@@ -37,7 +37,7 @@ function generateAllPdfs() {
             })
 
             fs.writeFileSync(outputPath, pdf)
-            console.log(`   ✅ Created: assets/resume-${locale}.pdf`)
+            console.log(`   ✅ Created: assets/cv-eduardo-donato-${locale}.pdf`)
         } catch (error) {
             console.error(`   ❌ Error generating ${locale} PDF:`, error.message ?? error)
             hasError = true
